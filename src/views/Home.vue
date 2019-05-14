@@ -31,10 +31,11 @@ export default {
   },
   methods: {
     handleDelete(id) {
-      // console.log(id);
+      console.log(id);
       axios.delete("https://jsonplaceholder.typicode.com/todos/${id}")
+      
       .then(res => (this.todos = this.todos.filter(todo => todo.id !== id))
-      .catch(err => console.log(err))
+      // .catch(err => console.log(err))
       // this.todos = this.todos.filter(todo => todo.id !== id
       )},
     handleAdd(newTodo) {
